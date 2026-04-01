@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineSearch Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>🎬 CineSearch Pro</h1>
+  <div>
+    <button id="themeToggle">Dark Mode</button>
+  </div>
+</header>
+
+<input type="text" id="searchInput" placeholder="Search movies, series, actors..." />
+
+<div class="filters">
+  <label for="genre">Genre</label>
+  <select id="genre">
+    <option value="">Select Genre</option>
+  </select>
+
+  <label for="sort">Sort</label>
+  <select id="sort">
+    <option value="popularity.desc">Popularity</option>
+    <option value="vote_average.desc">Rating</option>
+    <option value="release_date.desc">Latest</option>
+  </select>
+</div>
+
+<p id="loading">Loading...</p>
+
+<h2>Movies</h2>
+<div id="movies"></div>
+
+<div id="details"></div>
+
+<!-- IMPORTANT ORDER -->
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
