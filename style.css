@@ -9,6 +9,7 @@ body {
   color: #e5e5e5;
   font-family: 'Segoe UI', Arial, sans-serif;
   padding: 24px 32px;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -34,7 +35,7 @@ input {
   border-radius: 24px;
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.3s, color 0.3s;
 }
 
 input:focus {
@@ -44,7 +45,14 @@ input:focus {
 .filters {
   display: flex;
   gap: 12px;
+  align-items: center;
   margin-bottom: 20px;
+}
+
+.filters label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaa;
 }
 
 select {
@@ -56,7 +64,7 @@ select {
   font-size: 0.9rem;
   outline: none;
   cursor: pointer;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.3s, color 0.3s;
 }
 
 select:focus {
@@ -68,6 +76,13 @@ h2 {
   margin-bottom: 16px;
   font-weight: 600;
   color: #ccc;
+}
+
+#loading {
+  text-align: center;
+  color: #10b981;
+  font-size: 1rem;
+  padding: 20px 0;
 }
 
 #movies {
@@ -110,7 +125,7 @@ h2 {
 
 #details {
   margin-top: 30px;
-  display: flex;
+  display: none;
   gap: 24px;
   background: #1c1c1c;
   padding: 24px;
@@ -120,6 +135,7 @@ h2 {
 #details img {
   width: 200px;
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .watch span {
@@ -128,6 +144,8 @@ h2 {
   margin-right: 8px;
   border-radius: 6px;
   font-size: 0.85rem;
+  display: inline-block;
+  margin-top: 6px;
 }
 
 button {
@@ -147,33 +165,41 @@ button:hover {
 }
 
 /* LIGHT MODE */
-.dark {
+.light {
   background: #f0f0f0;
   color: #1a1a1a;
 }
 
-.dark input,
-.dark select {
+.light input,
+.light select {
   background: #e0e0e0;
   color: #1a1a1a;
   border-color: #ccc;
 }
 
-.dark .movie {
+.light .filters label {
+  color: #555;
+}
+
+.light .movie {
   background: #fff;
 }
 
-.dark .info {
+.light .info {
   background: #f5f5f5;
   color: #1a1a1a;
 }
 
-.dark #details {
+.light #details {
   background: #fff;
   color: #1a1a1a;
 }
 
-.dark h2 {
+.light .watch span {
+  background: #e0e0e0;
+}
+
+.light h2 {
   color: #444;
 }
 
@@ -195,5 +221,11 @@ button:hover {
 
   header h1 {
     font-size: 1.2rem;
+  }
+
+  #details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }

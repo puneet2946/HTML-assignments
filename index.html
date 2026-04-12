@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CineSearch Pro — Discover trending movies, filter by genre, sort by popularity or rating, and find where to stream." />
   <title>CineSearch Pro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,9 +11,9 @@
 <body>
 
 <header>
-  <h1>🎬 CineSearch Pro</h1>
+  <h1>CineSearch Pro</h1>
   <div>
-    <button id="themeToggle">Dark Mode</button>
+    <button id="themeToggle">Light Mode</button>
   </div>
 </header>
 
@@ -21,7 +22,7 @@
 <div class="filters">
   <label for="genre">Genre</label>
   <select id="genre">
-    <option value="">Select Genre</option>
+    <option value="">All Genres</option>
   </select>
 
   <label for="sort">Sort</label>
@@ -39,7 +40,6 @@
 
 <div id="details"></div>
 
-<!-- IMPORTANT ORDER -->
 <script src="config.js"></script>
 <script src="script.js"></script>
 
